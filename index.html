@@ -301,10 +301,18 @@
     </div>
     <section class="goods">
         <h2 class="section-name">Наши изделия</h2>
-        <section class="good">
+        <div class="good">
             <div class="good-content">
                 <div class="good-image">
-                    <img class="good-img" src="img/shop-item-desk1.jpg" alt="Подушки">
+                    <picture>
+                        <source
+                            media="(max-width: 640px)"
+                            srcset="img/shop-item-mobile1.jpg"> 
+                        <source
+                            media="(max-width: 1199px)"
+                            srcset="img/shop-item-tablet1.jpg">
+                        <img src="img/shop-item-desk1.jpg" alt="Подушка">
+                    </picture>
                 </div>
                 <div class="border">
                     <p class="good-name">Подушки на диван</p>
@@ -320,7 +328,15 @@
             </div>
             <div class="good-content">
                 <div class="good-image">
-                    <img class="good-img" src="img/shop-item-desk2.jpg" alt="Игрушка">
+                    <picture>
+                        <source
+                            media="(max-width: 640px)"
+                            srcset="img/shop-item-mobile2.jpg"> 
+                        <source
+                            media="(max-width: 1199px)"
+                            srcset="img/shop-item-tablet2.jpg">
+                        <img src="img/shop-item-desk2.jpg" alt="Заяц">
+                    </picture>
                 </div>
                 <div class="border border_toy">
                     <p class="good-name">Кукла «Зайчик»</p>
@@ -335,7 +351,15 @@
             </div> 
             <div class="good-content">
                 <div class="good-image">
-                    <img class="good-img" src="img/shop-item-desk3.jpg" alt="Рамка">
+                    <picture>
+                        <source
+                            media="(max-width: 640px)"
+                            srcset="img/shop-item-mobile3.jpg"> 
+                        <source
+                            media="(max-width: 1199px)"
+                            srcset="img/shop-item-tablet3.jpg">
+                        <img src="img/shop-item-desk3.jpg" alt="Рамка">
+                    </picture>
                 </div>
                 <div class="border border_frame">
                     <p class="good-name">Шестиугольная рамка</p>
@@ -349,7 +373,7 @@
                     </div>
                 </div>
             </div>         
-        </section>
+        </div>
     </section>
     <footer class="footer">
         <div class="social">

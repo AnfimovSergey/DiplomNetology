@@ -35,7 +35,6 @@ p {
     margin: 0;
 }
 .header {
-    height: 450px;
     background-image: url(../img/banner-bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -69,10 +68,11 @@ p {
     background-color: rgba(0, 0, 0, 0.6);
 }
 .header-wrapper {
-    width: 72%;
+    width: 1170px;
     margin: auto;
     position: relative;
     z-index: 1;
+    padding-bottom: 135px;
 }
 .menu-list:hover {
     border-bottom: 1px solid #fff;
@@ -105,9 +105,6 @@ p {
     width: 180px;
     display: block;
 }
-
-
-
 .popup-section_hidden {
     visibility: hidden;
 }
@@ -123,7 +120,6 @@ p {
     right: 0;
     left: 0;
     box-shadow: 0 0 5px 20000px #00000170;
-
 }
 .close-popup {
     border: none;
@@ -245,7 +241,6 @@ p {
     width: 100%;
     height: 130px;
     background: #f4f7f6;
-
 }
 .comments-textarea {
     width: 100%;
@@ -313,7 +308,6 @@ p {
 }
 .trend-box {
     width: 24.8%;
-    height: 320px;
     border-top: 1px solid #a3a4a1;
     border-bottom: 1px solid #a3a4a1;
     background-image: url(../img/trend1.jpg);
@@ -359,12 +353,19 @@ p {
     margin-right: 20px;
     border: 3px solid #b59f5b;
     padding: 30px;
-    top: 56px;
+    margin-top: 112px;
+    margin-bottom: 46px;
+    top: 26px;
 }
 .trend {
     display: flex;
     justify-content: space-between;
 }
+.trend-content-food {
+    margin-bottom: 19px;
+    top: -1px;
+}
+
 .trend-box-food {
     background-image: url(../img/trend2.jpg);
 }
@@ -375,8 +376,9 @@ p {
     background-image: url(../img/trend4.jpg);
 }
 .article {
-    width: 70%;
+    width: 800px;
     box-sizing: border-box;
+    margin-right: 100px;
 }
 .artical-image {
     display: flex;
@@ -437,7 +439,7 @@ p {
 .article-flex {
     display: flex;
     justify-content: space-between;
-    width: 72%;
+    width: 1200px;
     margin: 0 auto;
     margin-top: 64px;
 }
@@ -607,8 +609,9 @@ p {
     vertical-align: super;
 }
 .goods {
-    width: 72%;
+    width: 1170px;
     margin: 0 auto;
+
 
 }
 .good-name {
@@ -623,6 +626,7 @@ p {
     font-weight: 400;
     color: black;
     margin-top: 10px;
+
 }
 .link-good {
     text-decoration: none;
@@ -662,7 +666,7 @@ p {
     padding: 50px 23px 70px 23px;
     position: relative;
     bottom: 70px;
-    width: 99%;
+    margin: 0 auto;
 }
 .button-shop:hover {
     background: #323232;
@@ -673,7 +677,8 @@ p {
 .good {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: stretch;
+
 }
 .border_toy {
     padding-bottom: 30px;
@@ -682,7 +687,7 @@ p {
     padding-bottom: 50px;
 }
 .social {
-    width: 72%;
+    width: 1170px;
     margin: 0 auto;
     background: #f4f7f6;
 
@@ -717,17 +722,28 @@ p {
 
 @media  (min-width: 641px) and (max-width: 1199px) {
     .trend-box {
-    width: 49%;
+    width: 49.8%;
     height: 244px;
     border-top: 1px solid #a3a4a1;
     border-bottom: 1px solid #a3a4a1;
     box-sizing: border-box;
     position: relative;
-    margin-right: 1%;
-    margin-bottom: 1%
+
     }
     .trend {
         flex-wrap: wrap;
+    }
+    .trend-content {
+        top: -26px;
+    }
+    .trend-content-food {
+        top: -66px;
+    }
+    .trend-box-travel {
+        margin-top: 2px
+    }
+    .trend-box-health {
+        margin-top: 2px
     }
     .section-text {
         font-size: 17px;
@@ -770,7 +786,7 @@ p {
         width: 267px;
     }
     .goods {
-        width: 91%;
+        width: 700px;
     }
     .good-content {
         width: 47%
@@ -911,10 +927,14 @@ p {
         display: block;
     }
     .good-content {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
     }
     .goods {
         width: 91%;
+    }
+    .border {
+        padding: 50px 10% 70px 10%;
     }
     .section-name {
         margin-top: 44px;
@@ -937,5 +957,8 @@ p {
     }
     .section-name_popup {
         margin-top: 24px;
+    }
+    .border {
+        width: 330px;
     }
 }
