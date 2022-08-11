@@ -108,6 +108,11 @@ p {
 .popup-section_hidden {
     visibility: hidden;
 }
+.popup-form {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
 .popup-section_hidden {
     width: 390px;
     height: 586px;
@@ -274,20 +279,6 @@ p {
 .button-popup:hover {
     background: #323232;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .section-name {
     font-size: 20px;
     text-transform: uppercase;
@@ -315,6 +306,9 @@ p {
     background-repeat: no-repeat;
     box-sizing: border-box;
     position: relative;
+    padding: 110px 0 10px;
+    display: flex; 
+    flex-direction: column-reverse;
 }
 .trend-box::after {
     content: '';
@@ -345,7 +339,6 @@ p {
     text-transform: uppercase;
     margin-top: 12px;
 }
-
 .trend-content {
     z-index: 1;
     position: relative;
@@ -353,19 +346,11 @@ p {
     margin-right: 20px;
     border: 3px solid #b59f5b;
     padding: 30px;
-    margin-top: 112px;
-    margin-bottom: 46px;
-    top: 26px;
 }
 .trend {
     display: flex;
     justify-content: space-between;
 }
-.trend-content-food {
-    margin-bottom: 19px;
-    top: -1px;
-}
-
 .trend-box-food {
     background-image: url(../img/trend2.jpg);
 }
@@ -439,7 +424,7 @@ p {
 .article-flex {
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    width: 1170px;
     margin: 0 auto;
     margin-top: 64px;
 }
@@ -667,6 +652,7 @@ p {
     position: relative;
     bottom: 70px;
     margin: 0 auto;
+    flex-grow: 1;
 }
 .button-shop:hover {
     background: #323232;
@@ -723,21 +709,17 @@ p {
 @media  (min-width: 641px) and (max-width: 1199px) {
     .trend-box {
     width: 49.8%;
-    height: 244px;
     border-top: 1px solid #a3a4a1;
     border-bottom: 1px solid #a3a4a1;
     box-sizing: border-box;
     position: relative;
-
     }
     .trend {
         flex-wrap: wrap;
     }
     .trend-content {
-        top: -26px;
-    }
-    .trend-content-food {
-        top: -66px;
+        display: flex;
+        flex-direction: column;
     }
     .trend-box-travel {
         margin-top: 2px
@@ -766,11 +748,12 @@ p {
         width: 91%;
     }
     .article-flex {
-        width: 91%;
+        width: 100%;
         margin-top: 50px;
     }
     .article {
         width: 56%;
+        padding-left: 35px;
     }
     .title-text {
         font-size: 40px;
@@ -784,15 +767,28 @@ p {
     }
     .aside {
         width: 267px;
+        padding-right: 35px
     }
     .goods {
-        width: 700px;
+        max-width: 767px;
+        width: 100%
     }
     .good-content {
-        width: 47%
+        width: 45%;
+    }
+    .good-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .good {
         flex-wrap: wrap;
+        padding: 0 35px;
+        gap: 10%;
+    }
+    .border {
+        margin-left: -20px;
+        margin-right: -20px;
     }
     .section-name-article {
         font-size: 17px;
@@ -804,6 +800,12 @@ p {
         border-bottom: 3px solid #eeeeee;
         padding-bottom: 24px;
         margin-bottom: 40px;
+    }
+    .article-flex{
+        justify-content: center;
+    }
+    .article {
+        margin-right: 35px;
     }
     .article-contents:last-child {
         margin-bottom: 0
@@ -893,8 +895,9 @@ p {
     }
     .article-flex {
         display: block;
-        width: 91%;
+        width: 100%;
         margin-top: 44px;
+        padding: 0 15px;
     }
     .article-contents {
         display: block;
@@ -924,14 +927,17 @@ p {
         width: 100%;
     }
     .good {
-        display: block;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 15px;
     }
     .good-content {
-        width: 90%;
-        margin: 0 auto;
+        margin: 0 15px;
+        width: 95%;
     }
     .goods {
-        width: 91%;
+        width: 100%;
     }
     .border {
         padding: 50px 10% 70px 10%;
@@ -946,19 +952,104 @@ p {
         width: 80%
     }
     .popup-section {
-        width: 330px;
+        width: 300px;
         height: 545px;
     }
     .popup {
-        width: 280px;
+        width: 260px;
     }
     .close-popup {
-        margin-left: 305px;
+        margin-left: 275px;
     }
     .section-name_popup {
         margin-top: 24px;
     }
     .border {
-        width: 330px;
+        width: 100%;
+    }
+    .img-mobile {
+        width: 90%;
+    }
+}
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+ .trend-box {
+    width: 24.8%;
+    border-top: 1px solid #a3a4a1;
+    border-bottom: 1px solid #a3a4a1;
+    background-image: url(../img/trend1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    position: relative;
+    padding: 110px 0 10px;
+    display: flex; 
+    flex-direction: column-reverse;
+}
+.trend-box::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.category {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #b59f5b;
+    font-size: 14px;
+    margin-right: 20px;
+}
+.category:hover {
+    border-bottom: 1px solid #b59f5b;
+}
+.categories {
+    display: flex;
+}
+.section-text {
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 12px;
+}
+.trend-content {
+    z-index: 1;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 3px solid #b59f5b;
+    padding: 30px;
+    }
+    .trend {
+        display: flex;
+        justify-content: space-between;
+    }
+    .trend-box-food {
+        background-image: url(../img/trend2.jpg);
+    }
+    .trend-box-travel {
+        background-image: url(../img/trend3.jpg);
+    }
+    .trend-box-health {
+        background-image: url(../img/trend4.jpg);
+    }
+}
+@media (max-width: 640px) and (orientation: landscape) {
+     .trend-box {
+    width: 49.8%;
+    border-top: 1px solid #a3a4a1;
+    border-bottom: 1px solid #a3a4a1;
+    box-sizing: border-box;
+    position: relative;
+    }
+    .trend {
+        flex-wrap: wrap;
+        display: flex;
+    }
+    .trend-content {
+        display: flex;
+        flex-direction: column;
     }
 }
