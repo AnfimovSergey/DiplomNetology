@@ -621,6 +621,8 @@ p {
 .good-content {
     width: 368px;
     box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
 }
 .last-price {
     font-size: 14px;
@@ -647,6 +649,7 @@ p {
     text-align: center;
 }
 .border {
+    flex-grow: 1;
     border: 3px solid #d3c59d;
     padding: 50px 23px 70px 23px;
     position: relative;
@@ -753,7 +756,6 @@ p {
     }
     .article {
         width: 56%;
-        padding-left: 35px;
     }
     .title-text {
         font-size: 40px;
@@ -767,7 +769,6 @@ p {
     }
     .aside {
         width: 267px;
-        padding-right: 35px
     }
     .goods {
         max-width: 767px;
@@ -802,7 +803,7 @@ p {
         margin-bottom: 40px;
     }
     .article-flex{
-        justify-content: center;
+        padding: 0 35px;
     }
     .article {
         margin-right: 35px;
