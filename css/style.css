@@ -753,9 +753,13 @@ p {
     .article-flex {
         width: 100%;
         margin-top: 50px;
+        justify-content: center;
     }
     .article {
-        width: 56%;
+        width: 65%;
+    }
+    .aside {
+        width: 35%;
     }
     .title-text {
         font-size: 40px;
@@ -766,9 +770,6 @@ p {
     }
     .container {
         justify-content: space-between;
-    }
-    .aside {
-        width: 267px;
     }
     .goods {
         max-width: 767px;
